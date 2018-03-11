@@ -15,7 +15,7 @@ class Pokemon
 
   def self.find(id, db)
     array = db.execute("SELECT * FROM pokemon WHERE id = #{id.to_i}")
-    Pokemon.new(id:array[0][0], name:array[0][1], type:array[0][2], db: db)
+    Pokemon.new(id:array[0][0], name:array[0][1], type:array[0][2], hp:array[0][3], db: db)
   end
 
   def alter_hp(new_hp, db)
