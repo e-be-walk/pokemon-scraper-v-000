@@ -10,4 +10,9 @@ class Pokemon
   def self.save(name, type, db)
     db.execute("INSERT INTO pokemon(name, type) VALUES (?, ?)", [name, type])
   end
+
+  def self.find(id, db)
+    db.execute("SELECT * FROM pokemon WHERE id = #{id.to_i}")
+    Pokemon.new(id:array[0][0], name:array[0][1], type:array[0][2], db:db)
+  end
 end
