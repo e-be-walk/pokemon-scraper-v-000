@@ -4,5 +4,5 @@ CREATE TABLE pokemon (
   type TEXT
 );
 
-ALTER TABLE pokemon 
+ALTER TABLE pokemon
 ADD hp INTEGER SET DEFAULT 60;
